@@ -1,0 +1,39 @@
+﻿<Page x:Class="ISRPO_Cherednichenko402_PR14.Pages.PageAdd"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISRPO_Cherednichenko402_PR14.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAdd">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="150" Text="Название"/>
+                <TextBox Width="200" Text="{Binding Name}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="150" Text="Цвет"/>
+                <ComboBox x:Name="ComboColour" Width="200" SelectedItem="{Binding Colour}" DisplayMemberPath="Colour1"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="150" Text="Описание"/>
+                <TextBox Width="200" Height="100" TextWrapping="Wrap" Text="{Binding Opisanie}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="150" Text="Цена"/>
+                <TextBox Width="200" Text="{Binding Cena}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <TextBlock Width="150" Text="Количество на складе"/>
+                <TextBox Width="200" Text="{Binding Sklad}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5" HorizontalAlignment="Center">
+                <Button x:Name="BtnOk" Content="Сохранить" Width="100" Height="30" Margin="5" Click="BtnOk_Click"/>
+                <Button x:Name="BtnBack" Content="Назад" Width="100" Height="30" Margin="5" Click="BtnBack_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
